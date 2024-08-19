@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Work Experience</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this work experience?</h1>
+    <p>{{ work_experience.company }} - {{ work_experience.position }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+    </form>
+    <a href="{% url 'task62:portfolio_detail' %}">Cancel</a>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ portfolio.user.username }}'s Portfolio</title>
+    <style>
+        .section { margin-bottom: 20px; }
+        .section h2 { margin-bottom: 10px; }
+        .section a { display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #007bff; border: none; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease; }
+        .section a:hover { background-color: #0056b3; }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .back-button a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ portfolio.user.username }}'s Portfolio</h1>
+
+    <div class="section">
+        <h2>Portfolio Sections</h2>
+        <a href="{% url 'task62:projects_page' %}">Projects</a>
+        <a href="{% url 'task62:work_experience_page' %}">Work Experience</a>
+        <a href="{% url 'task62:education_page' %}">Education</a>
+        <a href="{% url 'task62:certifications_page' %}">Certifications</a>
+    </div>
+
+    <div class="back-button">
+        <a href="{% url 'task62:users-profile' %}">Back</a>
+    </div>
+</body>
+</html>
+

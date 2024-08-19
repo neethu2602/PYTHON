@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Education</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this education record?</h1>
+    <p>{{ education.institution }} - {{ education.degree }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+    </form>
+    <a href="{% url 'task62:portfolio_detail' %}">Cancel</a>
+</body>
+</html>

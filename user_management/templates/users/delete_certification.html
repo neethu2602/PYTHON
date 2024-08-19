@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Certification</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this certification?</h1>
+    <p>{{ certification.name }} - {{ certification.issuer }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm Delete</button>
+    </form>
+    <a href="{% url 'task62:portfolio_detail'

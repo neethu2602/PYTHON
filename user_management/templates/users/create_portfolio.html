@@ -1,0 +1,25 @@
+<!-- create_portfolio.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Portfolio</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Create Portfolio</title>
+</head>
+<body>
+    <h1>Create Your Portfolio</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Portfolio</button>
+    </form>
+    <a href="{% url 'task62:portfolio_detail' %}">Go to your portfolio</a>
+</body>
+</html>
+
+</body>
+</html>

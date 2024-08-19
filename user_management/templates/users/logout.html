@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends "users/base.html" %}
+    <title>{% block title %}Logout{% endblock title %}</title>
+</head>
+<body>
+{% block content %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+        <h5 class="card-title">You have been logged out</h5>
+        <p class="card-text">
+            Thanks for your time, contact me for any comments or suggestions using my email address.
+        </p>
+        <br><hr><a href="{% url 'login' %}" class="btn btn-primary">Sign in again</a>
+        </div>
+    </div>
+
+
+{% endblock content %}
+</body>
+</html>
